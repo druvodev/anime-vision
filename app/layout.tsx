@@ -3,6 +3,7 @@ import { DM_Sans } from "next/font/google";
 
 import "./globals.css";
 import Hero from "@/components/Hero";
+import Footer from "@/components/Footer";
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
@@ -18,9 +19,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${dmSans.className} max-w-7xl mx-auto bg-[#0F1117]`}>
+      <body
+        className={`${dmSans.className} max-w-7xl mx-auto bg-[rgb(15,17,23)]`}
+      >
         <Hero />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
